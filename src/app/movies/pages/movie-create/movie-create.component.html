@@ -1,0 +1,13 @@
+<form [formGroup]="form">
+  <input type="text" formControlName="title">
+  <input type="text" formControlName="synopsis">
+  <input type="text" formControlName="director">
+  <input type="datetime-local" formControlName="release">
+  <input type="button" (click)="create()" value="Create">
+</form>
+<div>
+  @if(errorMessage){
+    <p>{{errorMessage}}</p>
+  }
+
+</div>
